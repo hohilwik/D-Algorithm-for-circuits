@@ -15,6 +15,7 @@ GATES <number of gates>
 <gatetype> <number of inputs> <list of input lines> <output lines>
 AND 3 1 2 3 11
 OR 2 2 3 6
+FANOUT 3 3 7 8 9 // this has 1 input [3] and 3 outputs [7, 8, 9]
 // etc etc
 ```
 
@@ -31,4 +32,4 @@ FAULTS <number of faults in the list>
 
 The propagation of faults can be done with a queue, with the justification having a separate queue that gets called as a function inside the D-prop step, and another resizing vector for keeping track of the input vector. Need to have tables for each type of gate with the reduced 5-value truth table stored.
 
-I don't know how the backward implication step backtracks at the moment so will only implement this and look into the original paper later to figure out that step.
+I don't know how the backward implication step backtracks at the moment so will look into the original paper later to figure out that step and add that.
